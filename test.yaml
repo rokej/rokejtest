@@ -1,0 +1,27 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: rokej-test-github
+  namespace: open-cluster-management
+spec:
+  type: GitHub
+  pathname: https://github.com/rokej/testrepo.git
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: rokej-test-placement
+  namespace: open-cluster-management
+spec:
+  clusterLabels:
+    matchLabels:
+      vendor: "OpenShift"
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rokej-test-configmap
+  namespace: open-cluster-management
+data:
+  path: resource
