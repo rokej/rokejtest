@@ -1,8 +1,46 @@
-apiVersion: apps.open-cluster-management.io/v1
-kind: Channel
+---
+---
+---
+apiVersion: v1
+kind: ConfigMap
 metadata:
-  name: rokej-test-github
-  namespace: open-cluster-management
-spec:
-  type: GitHub
-  pathname: https://github.com/rokej/testrepo.git
+  name: test-configmap-1
+  namespace: default
+data:
+  path: resource
+---
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-2
+  namespace: default
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-3
+  namespace: default
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+  namespace: default
+data:
+  path: resource
+---
+---
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-5
+  namespace: default
+data:
+  path: resource
+		
