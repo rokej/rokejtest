@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: multins2
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-3
+  namespace: multins2
+data:
+  path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+  namespace: default
+data:
+  path: resource
