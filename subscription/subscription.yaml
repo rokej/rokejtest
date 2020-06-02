@@ -24,5 +24,4 @@ metadata:
 spec:
   channel: demo-ns-2/somechannel-2
   placement:
-    placementRef:
-      local: true
+    local: true
