@@ -25,4 +25,4 @@ kind: ConfigMap
 metadata:
   name: test-configmap-3
 data:
-  path: resource
+  path: resource3333
