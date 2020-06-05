@@ -26,3 +26,10 @@ metadata:
   name: test-configmap-3
 data:
   path: resource
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+data:
+  path: resource
