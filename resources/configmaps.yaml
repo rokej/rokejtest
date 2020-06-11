@@ -26,4 +26,20 @@ metadata:
   name: test-configmap-3
   namespace: default
 data:
+  path: resource3333222
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-4
+  namespace: default
+data:
+  path: resource2222
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: test-configmap-5
+  namespace: default
+data:
   path: resource3333
