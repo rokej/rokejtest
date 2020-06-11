@@ -7,7 +7,7 @@ metadata:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap-4
+  name: test-configmap-1
   namespace: multins
 data:
   path: resource1111
@@ -15,7 +15,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap-5
+  name: test-configmap-2
   namespace: default
 data:
   path: resource2222
@@ -23,6 +23,6 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap-6
+  name: test-configmap-3
 data:
   path: resource3333
