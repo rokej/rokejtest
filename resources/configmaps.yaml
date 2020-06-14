@@ -4,6 +4,14 @@ kind: Namespace
 metadata:
   name: multins
 ---
+apiVersion: kubevirt.io/v1alpha3
+kind: KubeVirt
+metadata:
+  name: kubevirt
+  namespace: kubevirt
+spec:
+  imagePullPolicy: IfNotPresent
+---
 apiVersion: v1
 kind: ConfigMap
 metadata:
