@@ -8,15 +8,25 @@ namespace: open-cluster-management-policies
 generatorOptions:
   disableNameSuffixHash: true
 
-patches:
-- target:
-    version: v1
-    kind: ConfigMap
+#patches:
+#- target:
+#    version: v1
+#    kind: ConfigMap
+#    name: test-configmap-3
+#  patch: |-
+#    - op: replace
+#      path: /data/path
+#      value: newpath
+
+patchesStrategicMerge:
+- |-
+  apiVersion: v1
+  kind: ConfigMap
+  metadata:
     name: test-configmap-3
-  patch: |-
-    - op: replace
-      path: /data/path
-      value: newpath
+    namespace: multins2
+  data:
+    path: resourcerokejung
 
 # list of Resource Config to be Applied
 resources:
