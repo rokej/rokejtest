@@ -4,4 +4,4 @@ metadata:
   name: test-configmap-4
   namespace: default
 data:
-  path: newresource
+  path: newresource222
