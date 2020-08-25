@@ -3,5 +3,7 @@ kind: ConfigMap
 metadata:
   name: test-configmap-4
   namespace: default
+  annotations:
+    test: 123
 data:
   path: newresource333
