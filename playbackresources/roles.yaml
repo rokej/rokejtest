@@ -28,3 +28,6 @@ subjects:
 - apiGroup: rbac.authorization.k8s.io
   kind: User
   name: bob
+- apiGroup: rbac.authorization.k8s.io
+  kind: User
+  name: joe
