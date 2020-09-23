@@ -11,6 +11,7 @@ metadata:
   namespace: default
 data:
   path: resource555
+  test: 123
 ---
 apiVersion: v1
 kind: ConfigMap
