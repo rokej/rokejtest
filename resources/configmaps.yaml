@@ -23,6 +23,6 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: configmap-3
+  name: configmap-6
 data:
   path: resource555
