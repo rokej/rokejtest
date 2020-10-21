@@ -26,3 +26,17 @@ metadata:
   name: configmap-3
 data:
   path: resource555
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-8
+data:
+  path: resource555
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-9
+data:
+  path: resource555
