@@ -17,7 +17,7 @@ spec:
   packageOverrides:
   - packageName: cloud-provider/nginx/kustomization
     packageOverrides:
-    - value: |
+    - value:
         namespace: provider
         resources:
         - service.yaml
