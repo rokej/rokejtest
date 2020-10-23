@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: cloud-provider-nginx
+  name: cloud-provider-nginx-local
   labels:
     app.kubernetes.io/name: nginx-cp
 spec:
