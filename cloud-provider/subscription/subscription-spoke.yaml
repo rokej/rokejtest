@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: cloud-amazon-eu-central-1
+  name: cloud-spoke
   namespace: provider
   annotations:
     apps.open-cluster-management.io/github-path: cloud-provider/nginx
@@ -12,13 +12,13 @@ spec:
   channel: demo/gitops
   placement:
     placementRef:
-      name: cloud-provider-a-eu1
+      name: cloud-provider-spoke
       kind: PlacementRule
   packageOverrides:
-  - packageName: kustomization
+  - packageName: cloud-provider/nginx/kustomization
     packageOverrides:
     - value: |
         namespace: provider
         resources:
         - service.yaml
-        - deployment-a-eu1.yaml
+        - deployment-spoke.yaml

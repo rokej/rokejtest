@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
 metadata:
-  name: cloud-provider-a-eu1
+  name: cloud-provider-spoke
   namespace: provider
   labels:
     app: cloud
@@ -11,4 +11,4 @@ spec:
       status: "True"
   clusterSelector:
     matchLabels:
-      local-cluster: "true"
+      environment: dev
