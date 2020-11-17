@@ -8,8 +8,9 @@ metadata:
     apps.open-cluster-management.io/github-path: resources2
 spec:
   channel: default/mychannel
-  placementRef:
-    name: local-cluster
+  placement:
+    placementRef:
+      name: local-cluster
 ---
 apiVersion: apps.open-cluster-management.io/v1
 kind: PlacementRule
