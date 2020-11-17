@@ -1,0 +1,42 @@
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Channel
+metadata:
+  name: somechannel-2
+  namespace: default
+spec:
+  type: GitHub
+  pathname: https://github.com/rokej/rokejtest.git
+  secretRef:
+    name: ggithubcom-rokej-rokejtes-auth
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ggithubcom-rokej-rokejtes-auth
+  namespace: default
+data:
+  user: cm9rZWo=
+  accessToken: MzMwZGZlMTJjYTUzZTlkYmJkYmNhYTM4MzExNjBiYzE2N2YyMjdjNw==
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: Subscription
+metadata:
+  name: demo-subscription-2
+  namespace: default
+  annotations:
+    apps.open-cluster-management.io/github-path: resources2
+spec:
+  channel: default/somechannel-2
+    placementRef:
+      name: local-cluster
+---
+apiVersion: apps.open-cluster-management.io/v1
+kind: PlacementRule
+metadata:
+  name: local-cluster
+  namespace: default
+spec:
+  clusterSelector:
+    matchLabels:
+      local-cluster: true
