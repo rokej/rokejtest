@@ -1,7 +1,7 @@
 apiVersion: apps.open-cluster-management.io/v1
 kind: Subscription
 metadata:
-  name: second-level-sub
+  name: third-level-sub
   namespace: default
   annotations:
     apps.open-cluster-management.io/github-path: resources2
