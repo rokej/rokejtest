@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: test-configmap-7
-  namespace: default
+  namespace: appns
   annotations:
     test: 123
 data:
